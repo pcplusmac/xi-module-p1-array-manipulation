@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array modules</title>
+    <script src="./arrayIteration.js" defer></script>
+</head>
+<body>
+    <section id="array-iteration">
+        <div class="perModule"></div>
+            <h2> what is 'first-class-function -- part I</h2>
+            <p><i>the content is sourcing from "Array iteration: first class videos" </i> <a href="https://academyxi.instructure.com/courses/430/pages/video-first-class-functions?module_item_id=47984" target="_blank"> see source video</a></p>
+        
+            <h3>how to create the first-class-function?</h3>
+            <p>
+               a function used as a parameter on it's name for other function -- a function being passed around
+               <strong>note: </strong> alternatively, it can be assign to a const variable this variable is the name of the function, which means that 
+               on the right side of equator can be just an anonymous function contain the logic of the function. <u>But without assigning function to a 
+               variable, it can be also used as first-class function by using it's name. </u>  
+            </p>
+            <h3>why do we do use this? </h3>
+            <p>
+                the reason for creating first-class-function is:  
+                 <ul>
+                    <li>it is the function that can be pass around as the parameter for other function; such as 'loopThrough'</li>
+                    <li>besides it can be passed around as a parameter, it can still keep the original feature as 
+                        a function -- to be invoked by using it's name with parenthesis following by. 
+                    </li>
+                    
+                </ul>
+
+            <h3>how to use it? the benefits of usage on it. </h3>
+            <p> 
+                <ul>
+                    <li>usage 1: inovke the method -- this is the normal usage of function name</li>
+                    <li>usage 2: inject the function's logic to other function by passing this parameter to other function.</li>
+                    <li>usage 3: increasing the flexibility for other function, this is alike the 'interface' in other languages,
+                        such as: handleArray() can take difference first-class methods to change the way of handling the array. </li>
+                     
+                </ul>
+
+            </p>
+           
+        </div>
+        <div class="perModule">
+            <h2> what is 'first-class-function -- part II</h2>
+            <p><i>the content is sourcing from "Array iteration: first class videos 2" </i> <a href="https://academyxi.instructure.com/courses/430/pages/video-first-class-functions-part-2?module_item_id=47986" target="_blank"> see source video</a></p>
+            <h3>how does first-class function work on a collection of objects?</h3>
+            <p>this is a bit more complicated comparing with handling the array, because we need to consider how to access the value of the object property by using its key.</p>
+
+        </div>
+       
+    </section>
+    
+</body>
+</html>
