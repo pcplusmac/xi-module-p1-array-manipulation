@@ -40,18 +40,22 @@ let books = [
 
 function loopThroughDynamic(array,finder) {
     let result = null
-    for (const item of array) {
+    for (const item of array ) {
         if (finder(item) === true) {
             result = item
-           break 
-            // return
         }
+        // break
+        return result
     }
-    return result
+    // return result
+   
 }
-
-function inventoryStockFirst(arr) {
-    return arr.inventory < 15
-    /**the code here of demo is on 'keep' demo--canvas */
+function inventoryStockFirst(obj) {
+    // console.log(typeof(obj.inventory < 15))
+    return obj.inventory < 15
+    
 }
 /**with find() */
+let inventoryList = books.find(inventoryStockFirst)
+console.log("output by find:",inventoryList)
+console.log(`output by find:" ${inventoryList.title}, ${inventoryList.inventory}`)
