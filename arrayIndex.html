@@ -54,12 +54,64 @@
 
         </div>
         <div class="perModule">
-            <h2>usage of map()</h2>
+            <h2> 
+                How to achieve the purpose of modifying every item of an array then return a new array with
+                containing the new modified data as the elements.
+            </h2>
+            <h3>the methods that we can use for this purpose </h3>
+            <ol>
+                <li>
+                    map()
+                </li>
+            </ol>
+            <h3>usage of map()</h3>
+            <p>
+                the callback function need to be passed into map() as parameter to tell it on the algorithm/logic for how to 
+                modify each item;
+                
+            </p>
+            <p>
+                map() can automatically loopthrough the whole array, pass each item to its callback function for application 
+                the process algorithm, then return a new array type result (it is the collection). 
+            </p>
         </div>
         <div class="perModule">
-            <h2>usage of find()</h2>
-            <h3>comparing find() with without using it on logic</h3>
-            <h3>somethings must be clear for successful on without using find(): </h3>
+            <h2>How to achieve the purpose of finding specific data from an array</h2>
+            <h3>the methods that we can use for this purpose </h3>
+            <ol>
+                <li>indexof(): <p> We can use this method to find the item of array when we know it's position</p></li>
+                <li>
+                    find(): 
+                    <p>if we only need the first mathcing item as the return result, then use this find method, 
+                    pass in a callback function to find() as parameter to tell find() the logic/algorithm on what to find.
+                    </p>
+                </li>
+                <li>
+                    filter():
+                    <p>
+                        if you need all the matching items to be returned as the result, then use filter() instead of find() 
+                        
+                    </p>
+                </li>
+            </ol>
+            <h3>usage of find()</h3>
+            <p>
+                it loopthrough every item of an array, then pass the item to its callback function to apply 
+                the algorithm for what item to find, then return the first mathcing item found ad the result. 
+            </p>
+            <h4>code analysis</h4>
+            <ul>
+                <li>The method "loopThroughDynamic()" in the code is use the explain the logic of find.</li>
+                <li>
+                    "inventoryStockFirst" is the callback function can be used for find() or other function,
+                    <strong>why do we need it?</strong> Because it is the logic for defining how are we going to
+                    find matching item. without it, find() has no idea what to do with the item it loop through.
+
+                </li>
+                <li></li>
+            </ul>
+            
+            <h4>somethings must be clear for successful on without using find(): </h4>
             <ol>
                 <li>
                     <u><strong>how to stop the loop.</strong></u> it is to find the first-matching 
@@ -73,6 +125,19 @@
                 <li></li>
                 <li></li>
             </ol>
+            <h3>use of filter()</h3>
+            <p>
+                The parameter usually passed in as parameter: 
+                <ul>
+                    <li>
+                        array/collection: this can be passed into filter as parameter; or we can use this to call filter() directly, then 
+                        pass the rest parameter to filter().
+
+                    </li>
+                    <li>attribute of item in an array: this is to identify which elements need to be checked for filter out.</li>
+                    <li>value: this parameter is to used for validating if the element with target attribute is the right data we are after.</li>
+                </ul>
+            </p>
         </div>
         <div class="perModule">
             <h2>usage of reduce()</h2>
