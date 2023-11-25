@@ -33,14 +33,14 @@ let books = [
         title: 'book7',
         price: 6.50,
         inventory: 85
-    }] 
+    }]
 
 // TODO: Find the first object whose condition returns true based on a callback
 /**without find() */
 
-function loopThroughDynamic(array,finder) {
+function loopThroughDynamic(array, finder) {
     let result = null
-    for (const item of array ) {
+    for (const item of array) {
         if (finder(item) === true) {
             result = item
         }
@@ -48,14 +48,35 @@ function loopThroughDynamic(array,finder) {
         return result
     }
     // return result
-   
+
 }
 function inventoryStockFirst(obj) {
     // console.log(typeof(obj.inventory < 15))
     return obj.inventory < 15
-    
+
 }
 /**with find() */
 let inventoryList = books.find(inventoryStockFirst)
-console.log("output by find:",inventoryList)
+console.log("output by find:", inventoryList)
 console.log(`output by find:" ${inventoryList.title}, ${inventoryList.inventory}`)
+
+/**using fitler() */
+let overPriced = books.filter(book => book.forEach( item => getOverPricedItem(item)))
+
+function getOverPricedItem (item){
+    
+    if (item.price >14){
+        return item.title
+    }
+}
+// let overPriced = books.filter(book => {
+//     if (book.price > 14) {
+//         return (book.title)
+//     }
+// }
+// )
+// overPriced.forEach(item => {
+//     return item.title})
+console.log("the over priced items are: ", overPriced)
+// console.log(`the over priced items are:, ${overPriced.title},${overPriced.price},${overPriced.inventory}`)
+console.log(overPriced)

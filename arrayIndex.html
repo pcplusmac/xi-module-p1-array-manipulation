@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array modules</title>
-    <script src="./reducFunc.js" defer></script>
-    <!-- <script defer src="./findFunc.js"></script> -->
+    <!-- <script src="./reducFunc.js" defer></script> -->
+    <script defer src="./findFunc.js"></script>
     <!-- <script defer src="./mapFunc.js"></script> -->
     <!-- <script src="./firstClassFunc.js" defer></script> -->
 </head>
@@ -140,7 +140,9 @@
             <h4>some 'giveaway' on using filter()</h4>
             <ul>
                 <li>
-                    what are 'pure function' VS 'impure function': <a href="https://academyxi.instructure.com/courses/430/pages/filtering-arrays?module_item_id=47997"> click to view more explanation</a></li>
+                    what is 'pure function' and what is 'impure function': 
+                    
+                </li>
                 <li>
                     How output the random data as the filter result? 
                 </li>
@@ -151,6 +153,20 @@
                     How to round the result. 
                 </li>
             </ul>
+            <h4>pure function' VS 'impure function</h4>
+            <a href="https://academyxi.instructure.com/courses/430/pages/filtering-arrays?module_item_id=47997"> click to view more explanation</a>
+            <p>
+                One final note about filter() and manipulating objects in JavaScript. We touched on this in the discussions of destructive and nondestructive operations, 
+                but there's some function-specific terminology that's important to know. A function in JavaScript can be pure or impure.
+            </p>
+            <p>
+                If a pure function is repeatedly invoked with the same set of arguments, the function will always return the same result. Its behavior is predictable. Additionally, 
+                invoking the function has no external side-effects such as making a network or database call or altering any object(s) passed to it as an argument.
+            </p>
+            <p>
+                mpure functions are the opposite: the return value is not predictable, and invoking the function might make network or database calls or alter any objects passed in as 
+                arguments.
+            </p>
         </div>
         <div class="perModule">
             <h2>How to achieve the purpose of returning the result as a single data instead of an array. </h2>
