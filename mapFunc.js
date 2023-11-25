@@ -56,11 +56,31 @@ function loopThroughDynamic(array,updaterFunc) {
 function priceCall(obj){
     return obj.price
 }
+
+loopThrough(books)
+loopThroughDynamic(books,priceCall)
 /**Way2: with map() */
 let bookTitles = books.map(item => item.title)
 console.log (bookTitles)
+let prices = books.map(item => item.price)
+let priceList = books.map(priceCall).join (" ")
+console.log(`without using callback function ${prices}`)
+console.log("pass callback function to map:",prices)
+console.log("pass callback function to map:",priceList)
+console.log(typeof(prices),typeof(priceList))
 
 //TODO:  create a new array for the modified version of the original array(keep the original array unchanged)
 /**Way1: without using map() */
+function halfDiscount(array) {
+    let discountPriceList = []
+    for (const book of books) {
+        discountPriceList.push(book.price/2)
 
+    }
+    return discountPriceList
+}
+console.log(halfDiscount(books))
 /**Way2: with map() */
+const halfOff = books.map(book => book.price/2)
+console.log(halfOff)
+console.log(typeof(halfOff))
