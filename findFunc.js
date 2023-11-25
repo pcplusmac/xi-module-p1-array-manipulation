@@ -42,22 +42,16 @@ function loopThroughDynamic(array,finder) {
     let result = null
     for (const item of array) {
         if (finder(item) === true) {
-            result = item.name
-            // the requirement is to find the first matching item, so we need to stop the loop
-            // break
-            // another way to stop the loop is use 'return'
-            return
+            result = item
+           break 
+            // return
         }
     }
     return result
 }
 
-function isBook(array) {
-    for (const item of array){
-        // console.log( item.inventory <15)
-        console.log(typeof(item.inventory <15))
-        break
-    }
-    
+function inventoryStockFirst(arr) {
+    return arr.inventory < 15
+    /**the code here of demo is on 'keep' demo--canvas */
 }
 /**with find() */
