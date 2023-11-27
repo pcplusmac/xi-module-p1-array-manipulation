@@ -34,3 +34,17 @@ let books = [
         price: 6.50,
         inventory: 85
     }] 
+
+function ourReduce(arr) {
+    return(arr.reduce(reducer, ''))
+    
+}
+
+function reducer(booksnameList, item){
+    
+    let titleList = item.title
+    return ((booksnameList + "," + titleList).substring(1)) 
+    
+
+}
+console.log(ourReduce(books))

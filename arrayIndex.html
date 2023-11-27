@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array modules</title>
-    <!-- <script src="./reducFunc.js" defer></script> -->
-    <script defer src="./findFunc.js"></script>
+    <script src="./reducFunc.js" defer></script>
+    <!-- <script defer src="./findFunc.js"></script> -->
     <!-- <script defer src="./mapFunc.js"></script> -->
     <!-- <script src="./firstClassFunc.js" defer></script> -->
 </head>
@@ -171,21 +171,61 @@
         <div class="perModule">
             <h2>How to achieve the purpose of returning the result as a single data instead of an array. </h2>
             <h3>usage of reduce()</h3>
-            <p>
-                this method usually take 2 parameters
-                <ol>
-                    <li>callback method: this is to set the moidifiction algorithm to reduce()</li>
-                    <li>2nd parameter: this can be any type below:
-                        <ul>
-                           <li>number: it is the starting position where to start algorithm on the array</li>
-                            <li>" ": return to a string</li>
-                            <li>{}: return data as an object</li>
-                            <li>[]: return the data as an array type</li> 
-                        </ul>
-                        
-                    </li>
-                </ol>
-            </p>
+            
+            <h4>this method usually take 2 parameters</h4>
+            <ol>
+                <li>callback method: this is to set the moidifiction algorithm to reduce()
+                    <p>Note: the callback method will containt the logic for how to process each item 
+                        that passed in from reduce(). check video: 'reduce-logic-new' for demo on how it works
+                    </p>
+                </li>
+                <li>2nd parameter: this can be any type below:
+                    <ul>
+                        <li>number: it is the starting position where to start algorithm on the array</li>
+                        <li>" ": return to a string</li>
+                        <li>{}: return data as an object</li>
+                        <li>[]: return the data as an array type</li> 
+                    </ul>
+                    <p>Note: this 2nd parameter will be used as the first parameter in reduce's callback function. </p>
+                </li>
+            </ol>
+            <h4>The aim of the code for demo on usage of reduce()</h4>
+            <p> To get the total of all inventory on value for all books.</p>
+            <p> to achive this purpose, we need to in each book muliple it's inventory and price to get the value for each book on current stock; then add up all books together for final total. </p>
+            
+            <h4> Some giveaways</h4>
+            <ol>
+                <li>when you return the result of reduce() method to a single result, you can add separator in between, such ','</li>
+
+                <li>when add separators,you probably have the situation: your result begin with the separator. it should 
+                    begin with the words, so you can use ''.substring()'' --- the buildin mehtod to control the starting
+                    position
+                </li>
+                <li>...</li>
+            </ol>
+            <h3>To understand how to use reduce() better by understanding the following questions:</h3>
+            <ol>
+                <li>
+                    what is the reduce for ? 
+                    
+                </li>
+                <li>
+                    what is the syntax of reduce? 
+                </li>
+                <li>
+                    how many parameters does it take? 
+                </li>
+                <li>
+                    how does the 2nd parameter of reduce to be used in it's callback function(hint: callback function is the first parameter of reduce())
+                     as the first parameter, to process the callback function's 2nd parameter (hint: it is the item of array passed in by reduce())?
+                    
+
+                </li>
+                <li>
+                    how to add the separator in the output result of reduce? and how to use 'substring()' to control the starting position of the string output result of reduce?
+
+                </li>
+            </ol>
         </div>
         <div class="perModule">
             <h2></h2>
