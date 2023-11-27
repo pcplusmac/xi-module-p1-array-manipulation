@@ -36,14 +36,14 @@ let books = [
     }] 
 
 function ourReduce(arr) {
-    return(arr.reduce(reducer, ''))
+    return(arr.reduce(reducer, '').substring(1))
     
 }
 
 function reducer(booksnameList, item){
     
     let titleList = item.title
-    return ((booksnameList + "," + titleList).substring(1)) 
+    return ((booksnameList + "," + titleList)) 
     
 
 }
